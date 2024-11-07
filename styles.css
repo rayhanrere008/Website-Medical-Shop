@@ -1,0 +1,257 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Wrapper untuk membatasi lebar dan menempatkan konten di tengah */
+.wrapper {
+    max-width: 1200px; /* Atur lebar maksimum konten */
+    margin: 0 auto; /* Pusatkan konten */
+    padding: 20px; /* Tambahkan padding */
+}
+
+/* Navbar top-right */
+.navbar-top {
+    background-color: red; /* Mengubah warna navbar menjadi merah */
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Logout button styles */
+.logout a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: darkred; /* Warna latar belakang logout button */
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.logout a:hover {
+    background-color: #b22222; /* Mengubah warna ketika hover */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px; /* Lebar sidebar */
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    height: 100vh; /* Tinggi sidebar penuh */
+    position: fixed; /* Mengunci posisi sidebar */
+    top: 0;
+    left: 0;
+    overflow-y: auto; /* Menambahkan scroll jika konten terlalu banyak */
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+    background-color: #343a40;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #495057;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 270px; /* Menggeser konten utama ke kanan sesuai lebar sidebar */
+    padding: 20px;
+    flex-grow: 1; /* Memastikan konten utama mengisi ruang yang tersisa */
+}
+
+/* Untuk membuat section yang terpisah */
+.section {
+    display: block;
+    margin-bottom: 20px; /* Jarak antar section */
+}
+
+/* Card style untuk konten utama */
+.card {
+    background-color: white; /* Warna latar belakang card */
+    border-radius: 8px; /* Sudut membulat */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    padding: 20px; /* Padding di dalam card */
+    margin: 20px 0; /* Margin atas dan bawah */
+}
+
+/* Gaya produk */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Gaya untuk setiap produk */
+.product {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.buy-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    cursor: pointer;
+    align-self: center;
+}
+
+.buy-button:hover {
+    background-color: #4cae4c;
+}
+
+/* Navbar Kategori */
+.category-navbar {
+    background-color: red;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.category-navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.category-navbar ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.category-navbar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    display: inline-block;
+    background-color: red;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.category-navbar ul li a:hover,
+.category-navbar ul li a.active {
+    background-color: white;
+    color: red;
+}
+
+/* Gaya untuk gambar produk di keranjang */
+table img {
+    max-width: 50px;
+    height: auto;
+}
+
+/* Gaya untuk tombol hapus */
+.remove-button {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.remove-button:hover {
+    background-color: darkred;
+}
+
+/* Gaya untuk tombol kembali */
+.back-button {
+    background-color: #0000f4;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.back-button:hover {
+    background-color: #0000f4;
+}
+
+/* Gaya untuk input bank name */
+#bank-name-input {
+    margin-top: 10px;
+    display: none; /* Sembunyikan input bank secara default */
+}
+
+#bank-name-input input {
+    width: 100%; /* Lebar input sesuai dengan kontainer */
+}
+
+/* Gaya untuk grup form */
+.form-group {
+    margin-bottom: 15px; /* Jarak antara grup form */
+}
+
+label {
+    display: block; /* Agar label berada di atas input */
+    margin-bottom: 5px; /* Jarak antara label dan input */
+}
+
+/* Gaya untuk input field */
+input[type="text"],
+input[type="password"] {
+    width: 100%; /* Membuat input field lebar penuh */
+    padding: 10px; /* Memberikan padding dalam input field */
+    border: 1px solid #ccc; /* Warna border */
+    border-radius: 4px; /* Membuat sudut input bulat */
+    box-sizing: border-box; /* Memastikan padding tidak menambah ukuran total */
+}
+
+/* Gaya untuk tombol login */
+.login-button {
+    background-color: #5cb85c; /* Warna hijau */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%; /* Membuat tombol penuh lebar */
+}
+
+.login-button:hover {
+    background-color: #4cae4c; /* Mengubah warna saat hover */
+}
